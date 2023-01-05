@@ -16,16 +16,14 @@ DROPLINK_API = os.environ.get("DROPLINK_API")
 MDISK_API = os.environ.get("MDISK_API", "Qu7jX9V0Sn3q1JHdxjPp")
 ADMINS = list(int(i.strip()) for i in os.environ.get("ADMINS").split("1883570185")) if os.environ.get("ADMINS") else []
 DATABASE_NAME = os.environ.get("DATABASE_NAME", "MdiskConvertorBotpro")
-DATABASE_URL = os.environ.get("DATABASE_URL", "mongodb+srv://Ravi:mdisk@cluster0.53vglyi.mongodb.net/?retryWrites=true&w=majority
-
-")
+DATABASE_URL = os.environ.get("DATABASE_URL", "mongodb+srv://postbot:postbot@cluster0.ouwne8q.mongodb.net/?retryWrites=true&w=majority")
 WEBSITE = os.environ.get('WEBSITE')
 
 #  Optionnal variables
 INCLUDE_DOMAIN = list(i.strip() for i in os.environ.get("INCLUDE_DOMAIN").split(",")) if os.environ.get("INCLUDE_DOMAIN") else []
 EXCLUDE_DOMAIN = list(i.strip() for i in os.environ.get("EXCLUDE_DOMAIN").split(",")) if os.environ.get("EXCLUDE_DOMAIN") else []
 CHANNELS = is_enabled((os.environ.get('CHANNELS', "True")), True)
-CHANNEL_ID = list(int(i.strip()) for i in os.environ.get("CHANNEL_ID").split("Channel Db Id")) if os.environ.get("CHANNEL_ID") else []
+CHANNEL_ID = list(int(i.strip()) for i in os.environ.get("CHANNEL_ID").split("-1001806065563")) if os.environ.get("CHANNEL_ID") else []
 FORWARD_MESSAGE = is_enabled((os.environ.get('FORWARD_MESSAGE', "False")), False)
 SOURCE_CODE = os.environ.get("SOURCE_CODE", "https://github.com/CyniteOfficial/Channel-Mdisk-Converter")
 USERNAME = os.environ.get("USERNAME", CyniteBackup)
