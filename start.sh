@@ -9,4 +9,4 @@ fi
 cd /Channel-Mdisk-Converter
 pip3 install -U -r requirements.txt
 echo "Starting Bot...."
-python3 -m main
+python3 -m main.py
