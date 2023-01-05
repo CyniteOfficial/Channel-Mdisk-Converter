@@ -9,13 +9,13 @@ def is_enabled(value, default):
         return default
 
 # Mandatory variables for the bot to start
-API_ID = int(os.environ.get("API_ID", "Api Id "))
-API_HASH = os.environ.get("API_HASH", "Api Hash")
-BOT_TOKEN = os.environ.get("BOT_TOKEN", "Bot Token")
+API_ID = int(os.environ.get("API_ID", "12124605"))
+API_HASH = os.environ.get("API_HASH", "5cf3577d85fd02286535ec2296934287")
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "5574279873:AAF5bwPyVH2dr0mjQRHTxldPDIcj1fRzYog")
 DROPLINK_API = os.environ.get("DROPLINK_API")
-MDISK_API = os.environ.get("MDISK_API", "your MDisk Api")
-ADMINS = list(int(i.strip()) for i in os.environ.get("ADMINS").split("Owner id")) if os.environ.get("ADMINS") else []
-DATABASE_NAME = os.environ.get("DATABASE_NAME", "MdiskConvertor")
+MDISK_API = os.environ.get("MDISK_API", "Qu7jX9V0Sn3q1JHdxjPp")
+ADMINS = list(int(i.strip()) for i in os.environ.get("ADMINS").split("1883570185")) if os.environ.get("ADMINS") else []
+DATABASE_NAME = os.environ.get("DATABASE_NAME", "MdiskConvertorBotpro")
 DATABASE_URL = os.environ.get("DATABASE_URL", "mongodb+srv://Ravi:mdisk@cluster0.53vglyi.mongodb.net/?retryWrites=true&w=majority
 
 ")
