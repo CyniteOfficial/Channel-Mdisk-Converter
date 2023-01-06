@@ -13,7 +13,7 @@ from utils import broadcast_admins, get_size, getHerokuDetails
 logger = logging.getLogger(__name__)
 
 
-@Client.on_message(filters.command('start'))
+@Client.on_message(filters.command('start') & filters.incoming)
 async def start(c:Client, m:Message):
 
     user_method = await db.get_bot_method(temp.BOT_USERNAME)
@@ -29,7 +29,7 @@ async def start(c:Client, m:Message):
     await m.reply_text(t, reply_markup=START_MESSAGE_REPLY_MARKUP, disable_web_page_preview=True)
 
 
-@Client.on_message(filters.command('help') & filters.user(ADMINS))
+@Client.on_message(filters.command('help') & filters.incoming)
 async def help_command(c, m):
     s = HELP_MESSAGE.format(
             firstname=temp.FIRST_NAME,
