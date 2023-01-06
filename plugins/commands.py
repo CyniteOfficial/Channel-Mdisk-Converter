@@ -1,6 +1,6 @@
 import datetime
 from translation import *
-from config import ADMINS, SOURCE_CODE, HEROKU_API_KEY, HEROKU_APP_NAME, HEROKU
+from config import SOURCE_CODE, HEROKU_API_KEY, HEROKU_APP_NAME, HEROKU
 from database import db
 from helpers import temp
 from config import WELCOME_IMAGE
@@ -15,9 +15,6 @@ logger = logging.getLogger(__name__)
 
 @Client.on_message(filters.command('start'))
 async def start(c:Client, m:Message):
-
-    if m.from_user.id not in ADMINS:
-        return await m.reply_text(f" ")
 
     user_method = await db.get_bot_method(temp.BOT_USERNAME)
     if not user_method:
