@@ -27,8 +27,9 @@ cancel_button = [[
 @Client.on_message(filters.private & filters.command('batch'))
 async def batch(c, m):
     user_method = await db.get_bot_method(temp.BOT_USERNAME)
-    if not user_method:
-        return await m.reply("Set your /method first")
+    if m.from_user.id in ADMINS:
+        if not user_method:
+            return await m.reply("Set your /method first")
         else:
             if len(m.command) < 2:
                 await m.reply_text(BATCH)
@@ -52,6 +53,7 @@ InlineKeyboardButton('Cancel 🔐', callback_data='cancel')
 
     elif m.from_user.id not in ADMINS:
         await m.reply_text(f""" """)
+
 
 @Client.on_callback_query(filters.regex(r'^cancel') | filters.regex(r'^batch'))
 async def batch_handler(c:Client, m:CallbackQuery):
@@ -131,6 +133,7 @@ async def batch_handler(c:Client, m:CallbackQuery):
 
 @Client.on_message(filters.command('cancel'))
 async def stop_button(c, m):
+    if m.from_user.id in ADMINS:
         temp.CANCEL = True
         msg = await c.send_message(
             text="<i>Trying To Stoping.....</i>",
