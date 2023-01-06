@@ -26,9 +26,9 @@ cancel_button = [[
 
 @Client.on_message(filters.private & filters.command('batch'))
 async def batch(c, m):
-    user_method = await db.get_bot_method(temp.BOT_USERNAME)
-       if m.from_user.id in ADMINS:
-       if not user_method:
+       user_method = await db.get_bot_method(temp.BOT_USERNAME)
+    if m.from_user.id in ADMINS:
+        if not user_method:
             return await m.reply("Set your /method first")
         else:
             if len(m.command) < 2:
