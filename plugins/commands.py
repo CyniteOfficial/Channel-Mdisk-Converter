@@ -1,6 +1,6 @@
 import datetime
 from translation import *
-from config import SOURCE_CODE, HEROKU_API_KEY, HEROKU_APP_NAME, HEROKU
+from config import ADMINS, SOURCE_CODE, HEROKU_API_KEY, HEROKU_APP_NAME, HEROKU
 from database import db
 from helpers import temp
 from config import WELCOME_IMAGE
