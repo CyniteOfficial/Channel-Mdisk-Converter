@@ -4,7 +4,7 @@ from translation import BATCH
 from helpers import AsyncIter, temp
 from pyrogram import Client, filters
 from utils import main_convertor_handler, update_stats
-from config import CHANNELS, ADMINS, SOURCE_CODE
+from config import ADMINS, CHANNELS, SOURCE_CODE
 from pyrogram.errors.exceptions.forbidden_403 import ChatWriteForbidden
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 from pyrogram.errors.exceptions.bad_request_400 import PeerIdInvalid
