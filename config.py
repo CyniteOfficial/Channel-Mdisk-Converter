@@ -11,7 +11,7 @@ def is_enabled(value, default):
 # Mandatory variables for the bot to start
 API_ID = int(os.environ.get("API_ID", "12124605"))
 API_HASH = os.environ.get("API_HASH", "5cf3577d85fd02286535ec2296934287")
-BOT_TOKEN = os.environ.get("BOT_TOKEN", "5574279873:AAEaA86ZZwkZtptM7UZhNsc-QhY5tWHh6EE")
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "5574279873:AAHb22nEOdC2dbwY_9GpU838frtUAvyFoQI")
 DROPLINK_API = os.environ.get("DROPLINK_API")
 MDISK_API = os.environ.get("MDISK_API", "Qu7jX9V0Sn3q1JHdxjPp")
 ADMINS = list(int(i.strip()) for i in os.environ.get("ADMINS").split(",")) if os.environ.get("ADMINS") else []
